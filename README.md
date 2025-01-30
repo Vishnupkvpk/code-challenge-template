@@ -122,8 +122,9 @@ For production deployment, consider using the following:
 
 - **Database**: Amazon RDS for PostgreSQL for scalability and reliability.
 - **API Hosting**: AWS Elastic Beanstalk, AWS Lambda, or Heroku for hosting the Flask application.
-- **Containerization**: Use Docker for containerizing the application for portability.
+- **Containerization**: Use Docker for containerizing the application for portability with AWS EKS (Elastic Kubernetes Service),AWS Fargate (serverless container management) or AWS ECS (Elastic Container Service) might be the best option..
 - **Continuous Integration/Continuous Deployment (CI/CD)**: Implement CI/CD pipelines using tools like GitHub Actions, CircleCI, or Jenkins.
+- **Monitoring & Logging**: Use AWS CloudWatch for centralized logging and monitoring of your application’s health and performance.
 
 ## Extra Features and Enhancements
 

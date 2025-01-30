@@ -1,0 +1,34 @@
+Weather Data Table:
+
+Each weather record is stored with columns for station ID, date, maximum temperature, minimum temperature, and precipitation.
+Uniqueness is ensured by enforcing a composite UNIQUE constraint on station_id and date.
+Missing values are represented as NULL or equivalent values (such as -9999 for missing weather readings).
+
+
+Weather Statistics Table:
+
+A separate table is created to store calculated yearly statistics for each station.
+This approach avoids redundant calculations during queries and helps optimize performance.
+The statistics include the average maximum temperature, average minimum temperature, and total accumulated precipitation for each station and year.
+
+
+Queries used to create table - 
+CREATE TABLE weather_data (
+    id SERIAL PRIMARY KEY,
+    station_id VARCHAR(50) NOT NULL,
+    date DATE NOT NULL,
+    max_temp INT,       -- Maximum temperature in tenths of Celsius
+    min_temp INT,       -- Minimum temperature in tenths of Celsius
+    precipitation INT,  -- Precipitation in tenths of millimeters
+    UNIQUE(station_id, date)
+);
+
+CREATE TABLE weather_stats (
+    id SERIAL PRIMARY KEY,
+    station_id VARCHAR(50) NOT NULL,
+    year INT NOT NULL,
+    avg_max_temp FLOAT,     -- Average maximum temperature in Celsius
+    avg_min_temp FLOAT,     -- Average minimum temperature in Celsius
+    total_precipitation FLOAT,  -- Total precipitation in centimeters
+    UNIQUE(station_id, year)
+);
