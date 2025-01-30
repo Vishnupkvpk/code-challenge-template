@@ -130,4 +130,4 @@ For production deployment, consider using the following:
 
 - **Data Ingestion Scheduling**: You can schedule the data ingestion process using AWS Lambda and CloudWatch for periodic execution.
 - **API Rate Limiting**: Implement rate limiting in the API to prevent abuse using Flask-Limiter or similar packages.
-- **Authentication**: Add authentication (e.g., API key or OAuth2) to secure the API.
+- **Authentication**: Add authentication (e.g., API key or JWT) to secure the API.
