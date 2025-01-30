@@ -116,7 +116,7 @@ The API provides the following endpoints:
 
 Weather data files (e.g., `.txt` files) are processed and ingested into the database using the `WeatherDataIngestor` class. This ensures that duplicate records are not added to the database based on `station_id` and `date`.
 
-## 9. Deployment Considerations
+## Deployment Considerations
 
 For production deployment, consider using the following:
 
@@ -125,7 +125,7 @@ For production deployment, consider using the following:
 - **Containerization**: Use Docker for containerizing the application for portability.
 - **Continuous Integration/Continuous Deployment (CI/CD)**: Implement CI/CD pipelines using tools like GitHub Actions, CircleCI, or Jenkins.
 
-## 10. Extra Features and Enhancements
+## Extra Features and Enhancements
 
 - **Data Ingestion Scheduling**: You can schedule the data ingestion process using AWS Lambda and CloudWatch for periodic execution.
 - **API Rate Limiting**: Implement rate limiting in the API to prevent abuse using Flask-Limiter or similar packages.
